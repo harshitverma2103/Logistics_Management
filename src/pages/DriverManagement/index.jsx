@@ -1,5 +1,6 @@
 import React from "react";
-import { drivers } from "../../utils/MockData"; 
+import { drivers } from "../../utils/MockData";
+import Card from "../../components/Card";
 import "./style.css";
 
 const DriverManagement = () => {
@@ -11,9 +12,11 @@ const DriverManagement = () => {
       <ul className="driver-management-list">
         {drivers.map((driver) => (
           <li key={driver.id} className="driver-management-item">
-            <h2 className="driver-name">Name: {driver.name}</h2>
-            <p className="driver-contact">Contact: {driver.contact}</p>
-            <p className="driver-truck-assigned">Truck Assigned: {driver.truckAssigned}</p>
+            <Card
+              title={`Driver Name: ${driver.name}`}
+              subTitle={`Contact: ${driver.contact}`}
+              description={`Truck Assigned: ${driver.truckAssigned}`}
+            />
           </li>
         ))}
       </ul>

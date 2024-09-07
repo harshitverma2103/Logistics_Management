@@ -1,6 +1,6 @@
 .driver-management {
   padding: 20px;
-  background: linear-gradient(to right, #f1f8e9, #c5e1a5);
+  background: linear-gradient(to right, #e0f7fa, #80deea);
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
@@ -12,70 +12,40 @@
 
 .driver-management-header h1 {
   font-size: 2.5em;
-  color: #388e3c;
+  color: #00796b;
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .driver-management-list {
-  list-style-type: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  list-style-type: none;
+  padding: 0;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .driver-management-item {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   flex: 1 1 calc(25% - 20px);
   max-width: calc(25% - 20px);
+}
 
-  .driver-management-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+@media (max-width: 768px) {
+  .driver-management-header h1 {
+    font-size: 2em;
   }
 
-  .driver-name {
-    font-size: 1.8em;
-    color: #004d40;
-    margin: 0;
-    font-weight: 600;
+  .driver-management-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
+}
 
-  .driver-contact,
-  .driver-truck-assigned {
-    font-size: 1.2em;
-    color: #555;
-    margin: 5px 0;
-  }
-
-  .driver-contact {
-    font-weight: 500;
-  }
-
-  .driver-truck-assigned {
-    font-weight: 500;
-  }
-
-  @media (max-width: 768px) {
-    .driver-management-header h1 {
-      font-size: 2em;
-    }
-
-    .driver-management-item {
-      padding: 15px;
-      flex: 1 1 100%;
-      max-width: 100%;
-    }
-
-    .driver-name {
-      font-size: 1.5em;
-    }
+@media (max-width: 480px) {
+  .driver-management-item {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }

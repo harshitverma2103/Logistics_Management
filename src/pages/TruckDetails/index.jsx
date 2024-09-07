@@ -1,5 +1,6 @@
 import React from "react";
 import { trucks } from "../../utils/MockData";
+import Card from "../../components/Card";
 import "./style.css";
 
 const TruckDetailsPage = () => {
@@ -11,15 +12,11 @@ const TruckDetailsPage = () => {
       <ul className="truck-details-list">
         {trucks.map((truck) => (
           <li key={truck.id} className="truck-details-item">
-            <h2 className="truck-number">Truck Number: {truck.number}</h2>
-            <p className="truck-capacity">Capacity: {truck.capacity}</p>
-            <p
-              className={`truck-status ${truck.status
-                .toLowerCase()
-                .replace(/\s+/g, "-")}`}
-            >
-              Status: {truck.status}
-            </p>
+            <Card
+              title={`Truck Number: ${truck.number}`}
+              subTitle={`Capacity: ${truck.capacity}`}
+              description={`Status: ${truck.status}`}
+            />
           </li>
         ))}
       </ul>
