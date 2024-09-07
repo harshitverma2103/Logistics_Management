@@ -1,0 +1,48 @@
+/* src/components/LiveTrackingDashboard/style.css */
+
+.live-tracking-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: #f4f4f9; /* Light background color */
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-header {
+  padding: 1rem;
+  background-color: #4a90e2; /* Header background color */
+  color: white;
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.dashboard-header p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.map-container {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-footer {
+  padding: 1rem;
+  background-color: #e0e0e0; /* Footer background color */
+  text-align: center;
+}
+
+.dashboard-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}

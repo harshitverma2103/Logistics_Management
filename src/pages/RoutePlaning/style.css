@@ -1,0 +1,26 @@
+/* RoutePlan.css */
+.route-plan-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.map {
+  width: 100%;
+  height: 80vh; /* Adjust as needed */
+}
