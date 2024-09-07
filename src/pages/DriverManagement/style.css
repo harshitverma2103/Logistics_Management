@@ -1,12 +1,6 @@
-/* src/components/DriverManagement.css */
-
 .driver-management {
   padding: 20px;
-  background: linear-gradient(
-    to right,
-    #f1f8e9,
-    #c5e1a5
-  ); /* Soft gradient background */
+  background: linear-gradient(to right, #f1f8e9, #c5e1a5);
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
@@ -28,7 +22,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between items */
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -39,50 +33,49 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  flex: 1 1 calc(25% - 20px); /* 4 items per row */
-  max-width: calc(25% - 20px); /* Limit the width */
-}
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
 
-.driver-management-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.driver-name {
-  font-size: 1.8em;
-  color: #004d40;
-  margin: 0;
-  font-weight: 600;
-}
-
-.driver-contact,
-.driver-truck-assigned {
-  font-size: 1.2em;
-  color: #555;
-  margin: 5px 0;
-}
-
-.driver-contact {
-  font-weight: 500;
-}
-
-.driver-truck-assigned {
-  font-weight: 500;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .driver-management-header h1 {
-    font-size: 2em;
-  }
-
-  .driver-management-item {
-    padding: 15px;
-    flex: 1 1 100%; /* Full width on smaller screens */
-    max-width: 100%; /* Limit the width */
+  .driver-management-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
   .driver-name {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    color: #004d40;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .driver-contact,
+  .driver-truck-assigned {
+    font-size: 1.2em;
+    color: #555;
+    margin: 5px 0;
+  }
+
+  .driver-contact {
+    font-weight: 500;
+  }
+
+  .driver-truck-assigned {
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .driver-management-header h1 {
+      font-size: 2em;
+    }
+
+    .driver-management-item {
+      padding: 15px;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    .driver-name {
+      font-size: 1.5em;
+    }
   }
 }
