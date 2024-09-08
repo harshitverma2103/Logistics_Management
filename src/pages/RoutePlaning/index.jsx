@@ -13,7 +13,7 @@ const RoutePlan = () => {
     const mapLink = "<a href='http://openstreetmap.org'>OpenStreetMap</a>";
     L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
       attribution: "Leaflet &copy; " + mapLink + ", contribution",
-      maxZoom: 18,
+      maxZoom: 22,
     }).addTo(map);
 
     const taxiIcon = L.icon({
