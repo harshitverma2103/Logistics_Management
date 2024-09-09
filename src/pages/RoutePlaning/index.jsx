@@ -21,10 +21,17 @@ const RoutePlan = () => {
       iconSize: [70, 70],
     });
 
+    const locationIcon = L.icon({
+      iconUrl: require("../../assets/location-icon.png"),
+      iconSize: [40, 40],
+    });
+
     const marker = L.marker([28.6139, 77.209], { icon: truckIcon }).addTo(map);
 
     map.on("click", (e) => {
-      const newMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+      const destinationMarker = L.marker([e.latlng.lat, e.latlng.lng], {
+        icon: locationIcon,
+      }).addTo(map);
 
       if (L.Routing) {
         L.Routing.control({
@@ -35,12 +42,18 @@ const RoutePlan = () => {
         })
           .on("routesfound", (e) => {
             const routes = e.routes;
-            console.log(routes);
+            const bounds = L.latLngBounds(routes[0].coordinates);
+            map.fitBounds(bounds);
 
             e.routes[0].coordinates.forEach((coord, index) => {
               setTimeout(() => {
                 marker.setLatLng([coord.lat, coord.lng]);
                 map.panTo([coord.lat, coord.lng]);
+                if (index === e.routes[0].coordinates.length - 1) {
+                  alert(
+                    "The truck has reached its destination. The trip is complete."
+                  );
+                }
               }, 100 * index);
             });
           })
