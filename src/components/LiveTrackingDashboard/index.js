@@ -5,7 +5,6 @@ import L from "leaflet";
 import { simulateTruckData } from "../../utils/MockData";
 import "./style.css";
 
-// Create custom icons based on truck status
 const truckIcons = {
   inTransit: new L.Icon({
     iconUrl: require("../../assets/truck-in-transit.png"),
@@ -28,7 +27,7 @@ const getTruckIcon = (status) => {
     case "Maintenance":
       return truckIcons.maintenance;
     default:
-      return false;
+      return truckIcons.inTransit;
   }
 };
 
@@ -77,19 +76,23 @@ const LiveTrackingDashboard = () => {
               key={truck.id}
               position={[truck.lat, truck.lng]}
               icon={getTruckIcon(truck.status)}
-            >
-              <Popup>
-                <strong>Truck ID:</strong> {truck.id}
-                <br />
-                <strong>Name:</strong> {truck.name}
-                <br />
-                <strong>Status:</strong> {truck.status}
-                <br />
-                <strong>Capacity:</strong> {truck.capacity}
-                <br />
-                <strong>Driver:</strong> {truck.driver}
-              </Popup>
-            </Marker>
+              eventHandlers={{
+                mouseover: (e) => {
+                  const { target } = e;
+                  target.bindPopup(
+                    `<strong>Truck ID:</strong> ${truck.id}<br />
+                     <strong>Name:</strong> ${truck.name}<br />
+                     <strong>Status:</strong> ${truck.status}<br />
+                     <strong>Capacity:</strong> ${truck.capacity}<br />
+                     <strong>Driver:</strong> ${truck.driver}`
+                  ).openPopup();
+                },
+                mouseout: (e) => {
+                  const { target } = e;
+                  target.closePopup();
+                }
+              }}
+            />
           ))}
           {bounds && <AdjustView bounds={bounds} />}
         </MapContainer>
