@@ -16,12 +16,12 @@ const RoutePlan = () => {
       maxZoom: 22,
     }).addTo(map);
 
-    const taxiIcon = L.icon({
+    const truckIcon = L.icon({
       iconUrl: require("../../assets/truck-icon.png"),
       iconSize: [70, 70],
     });
 
-    const marker = L.marker([28.6139, 77.209], { icon: taxiIcon }).addTo(map);
+    const marker = L.marker([28.6139, 77.209], { icon: truckIcon }).addTo(map);
 
     map.on("click", (e) => {
       const newMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
@@ -40,6 +40,7 @@ const RoutePlan = () => {
             e.routes[0].coordinates.forEach((coord, index) => {
               setTimeout(() => {
                 marker.setLatLng([coord.lat, coord.lng]);
+                map.panTo([coord.lat, coord.lng]);
               }, 100 * index);
             });
           })
