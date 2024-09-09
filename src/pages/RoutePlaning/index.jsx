@@ -54,6 +54,7 @@ const RoutePlan = () => {
                   alert(
                     "The truck has reached its destination. The trip is complete."
                   );
+                  window.location.reload();
                 }
               }, 100 * index);
             });
