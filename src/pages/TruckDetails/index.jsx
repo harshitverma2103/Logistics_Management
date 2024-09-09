@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { trucks } from "../../utils/MockData";
 import Card from "../../components/Card";
 import "./style.css";
 
 const TruckDetailsPage = () => {
+  useEffect(() => {
+    document.title = "Truck Details";
+  });
+
   return (
     <div className="truck-details-page">
       <header className="truck-details-header">

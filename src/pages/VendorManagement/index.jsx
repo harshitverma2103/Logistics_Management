@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { vendors } from "../../utils/MockData";
 import Card from "../../components/Card";
 import "./style.css";
 
 const VendorManagement = () => {
+  useEffect(() => {
+    document.title = "Vendor Management";
+  });
+
   return (
     <div className="vendor-management">
       <header className="vendor-management-header">

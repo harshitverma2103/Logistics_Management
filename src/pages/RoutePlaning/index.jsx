@@ -9,6 +9,7 @@ const RoutePlan = () => {
   const mapRef = useRef(null);
 
   useEffect(() => {
+    document.title = "Route Planing";
     const map = L.map(mapRef.current).setView([28.6139, 77.209], 11);
     const mapLink = "<a href='http://openstreetmap.org'>OpenStreetMap</a>";
     L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {

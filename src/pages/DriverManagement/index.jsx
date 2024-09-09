@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { drivers } from "../../utils/MockData";
 import Card from "../../components/Card";
 import "./style.css";
 
 const DriverManagement = () => {
+  useEffect(() => {
+    document.title = "Driver Management";
+  });
+
   return (
     <div className="driver-management">
       <header className="driver-management-header">
