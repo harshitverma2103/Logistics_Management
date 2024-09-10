@@ -14,6 +14,18 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
+.card-delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 10px 0 0 auto;
+}
+
+.card-delete-icon {
+  width: 24px;
+  height: 24px;
+}
 
 .card-content {
   text-align: center;
