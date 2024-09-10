@@ -33,16 +33,16 @@
 
 .search-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: relative;
-  width: 100%;
-  margin: 20px auto;
+  width: 90%;
+  margin: 20px auto 20px 130px;
 }
 
 .truck-search-input {
   padding: 12px 16px;
   width: 100%;
-  max-width: 400px;
+  max-width: 280px;
   font-size: 16px;
   border: 2px solid #00796b;
   border-radius: 8px;
@@ -56,10 +56,10 @@
 }
 
 .search-icon {
-  position: absolute;
+  position: relative;
   top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
+  right: 30px;
+  transform: translateY(60%);
   width: 20px;
   height: 20px;
   cursor: pointer;
