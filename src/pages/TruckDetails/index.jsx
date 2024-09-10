@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { trucks } from "../../utils/MockData";
 import Card from "../../components/Card";
-import searchIcon from "../../assets/search-icon.png";
+import SearchBar from "../../components/SearchBar";
 import "./style.css";
 
 const TruckDetailsPage = () => {
@@ -20,18 +20,7 @@ const TruckDetailsPage = () => {
       <header className="truck-details-header">
         <h1>Truck Details</h1>
       </header>
-
-      <div className="search-container">
-        <input
-          type="text"
-          placeholder="Search by truck number"
-          value={searchQuery}
-          onChange={handleSearch}
-          className="truck-search-input"
-        />
-        <img src={searchIcon} alt="Search" className="search-icon" />
-      </div>
-
+      <SearchBar value={searchQuery} onChange={handleSearch}/>
       <ul className="truck-details-list">
         {filteredTrucks.map((truck) => (
           <li key={truck.id} className="truck-details-item">
