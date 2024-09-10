@@ -4,66 +4,96 @@ export const trucks = [
     number: "TRK001",
     status: "In Transit",
     capacity: "20 tons",
-    driver: "Driver A",
+    driver: "Ravi Kumar",
   },
   {
     id: 2,
     number: "TRK002",
     status: "In Transit",
     capacity: "15 tons",
-    driver: "Driver B",
+    driver: "Anil Sharma",
   },
   {
     id: 3,
     number: "TRK003",
     status: "In Transit",
     capacity: "25 tons",
-    driver: "Driver C",
+    driver: "Suresh Patel",
   },
   {
     id: 4,
     number: "TRK004",
     status: "In Transit",
     capacity: "18 tons",
-    driver: "Driver D",
+    driver: "Rajesh Yadav",
   },
   {
     id: 5,
     number: "TRK005",
     status: "Maintenance",
     capacity: "22 tons",
-    driver: "Driver E",
+    driver: "Kumar Ghosh",
   },
   {
     id: 6,
     number: "TRK006",
     status: "Maintenance",
     capacity: "22 tons",
-    driver: "Driver F",
+    driver: "Sunil Mehta",
   },
   {
     id: 7,
     number: "TRK007",
     status: "In Transit",
     capacity: "25 tons",
-    driver: "Driver G",
+    driver: "Vikram Singh",
   },
 ];
 
 export const drivers = [
-  { id: 1, name: "Driver A", contact: "123-456-7890", truckAssigned: "TRK001" },
-  { id: 2, name: "Driver B", contact: "987-654-3210", truckAssigned: "TRK002" },
-  { id: 3, name: "Driver C", contact: "111-222-3333", truckAssigned: "TRK003" },
-  { id: 4, name: "Driver D", contact: "444-555-6666", truckAssigned: "TRK004" },
-  { id: 5, name: "Driver E", contact: "777-888-9999", truckAssigned: "TRK005" },
-  { id: 6, name: "Driver F", contact: "101-202-3030", truckAssigned: "TRK006" },
+  {
+    id: 1,
+    name: "Ravi Kumar",
+    contact: "999-888-7777",
+    truckAssigned: "TRK001",
+  },
+  {
+    id: 2,
+    name: "Anil Sharma",
+    contact: "888-777-6666",
+    truckAssigned: "TRK002",
+  },
+  {
+    id: 3,
+    name: "Suresh Patel",
+    contact: "777-666-5555",
+    truckAssigned: "TRK003",
+  },
+  {
+    id: 4,
+    name: "Rajesh Yadav",
+    contact: "666-555-4444",
+    truckAssigned: "TRK004",
+  },
+  {
+    id: 5,
+    name: "Kumar Ghosh",
+    contact: "555-444-3333",
+    truckAssigned: "TRK005",
+  },
+  {
+    id: 6,
+    name: "Sunil Mehta",
+    contact: "444-333-2222",
+    truckAssigned: "TRK006",
+  },
 ];
 
 export const vendors = [
-  { id: 1, name: "Vendor A", drivers: ["Driver A", "Driver B"] },
-  { id: 2, name: "Vendor B", drivers: ["Driver C", "Driver D"] },
-  { id: 3, name: "Vendor C", drivers: ["Driver E"] },
-  { id: 4, name: "Vendor D", drivers: ["Driver F"] },
+  { id: 1, name: "Transport Co.", drivers: ["Ravi", "Suresh"] },
+  { id: 2, name: "Logistics Ltd.", drivers: ["Anil", "Rajesh"] },
+  { id: 3, name: "Freight Inc.", drivers: ["Sunil"] },
+  { id: 4, name: "Haulage LLC", drivers: ["Vikram"] },
 ];
 
 export const simulateTruckData = () => [
@@ -74,7 +104,7 @@ export const simulateTruckData = () => [
     lat: 12.9716,
     lng: 77.5946,
     capacity: "20 tons",
-    driver: "Driver A",
+    driver: "Ravi Kumar",
   },
   {
     id: 2,
@@ -83,7 +113,7 @@ export const simulateTruckData = () => [
     lat: 13.0827,
     lng: 80.2707,
     capacity: "15 tons",
-    driver: "Driver B",
+    driver: "Anil Sharma",
   },
   {
     id: 3,
@@ -92,7 +122,7 @@ export const simulateTruckData = () => [
     lat: 28.6139,
     lng: 77.209,
     capacity: "25 tons",
-    driver: "Driver C",
+    driver: "Suresh Patel",
   },
   {
     id: 4,
@@ -101,7 +131,7 @@ export const simulateTruckData = () => [
     lat: 19.076,
     lng: 72.8777,
     capacity: "18 tons",
-    driver: "Driver D",
+    driver: "Rajesh Yadav",
   },
   {
     id: 5,
@@ -110,7 +140,7 @@ export const simulateTruckData = () => [
     lat: 22.5726,
     lng: 88.3639,
     capacity: "22 tons",
-    driver: "Driver E",
+    driver: "Kumar Ghosh",
   },
   {
     id: 6,
@@ -119,7 +149,7 @@ export const simulateTruckData = () => [
     lat: 17.385,
     lng: 78.4867,
     capacity: "22 tons",
-    driver: "Driver F",
+    driver: "Sunil Mehta",
   },
   {
     id: 7,
@@ -128,7 +158,7 @@ export const simulateTruckData = () => [
     lat: 27.1767,
     lng: 78.0081,
     capacity: "25 tons",
-    driver: "Driver G",
+    driver: "Vikram Singh",
   },
   {
     id: 8,
@@ -136,7 +166,7 @@ export const simulateTruckData = () => [
     status: "Maintenance",
     lat: 26.9124,
     lng: 75.7873,
-    capacity: "05 tons",
-    driver: "Driver H",
+    capacity: "5 tons",
+    driver: "Manoj Kumar",
   },
 ];
