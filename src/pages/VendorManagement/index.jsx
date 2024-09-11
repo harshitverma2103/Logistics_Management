@@ -15,11 +15,14 @@ const VendorManagement = () => {
       setData(savedData);
     } else {
       setData(vendors);
+      saveToLocalStorage(vendors);
     }
   }, []);
 
   useEffect(() => {
-    saveToLocalStorage(data);
+    if (data.length > 0) {
+      saveToLocalStorage(data);
+    }
   }, [data]);
 
   const saveToLocalStorage = (data) => {
@@ -29,6 +32,7 @@ const VendorManagement = () => {
   const deleteItem = (id) => {
     const updatedData = data.filter((item) => item.id !== id);
     setData(updatedData);
+    saveToLocalStorage(updatedData);
   };
 
   const handleSearch = (e) => {
