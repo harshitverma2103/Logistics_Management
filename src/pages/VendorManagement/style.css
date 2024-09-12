@@ -1,10 +1,6 @@
 .vendor-management {
   padding: 20px;
-  background: linear-gradient(
-    to right,
-    #e0f7fa,
-    #80deea
-  ); /* Gradient background */
+  background: linear-gradient(to right, #e0f7fa, #80deea);
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
@@ -21,15 +17,42 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.vendor-management-add {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 20px;
+  display: flex;
+  justify-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #004d40;
+}
+
+.add-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .vendor-management-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between items */
+  gap: 20px;
   list-style-type: none;
   padding: 0;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .vendor-management-item {
   flex: 1 1 calc(25% - 20px);
   max-width: calc(25% - 20px);
@@ -45,19 +68,11 @@
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
-
-  .vendor-name {
-    font-size: 1.5em;
-  }
 }
 
 @media (max-width: 480px) {
   .vendor-management-item {
     flex: 1 1 100%;
     max-width: 100%;
-  }
-
-  .vendor-name {
-    font-size: 1.2em;
   }
 }

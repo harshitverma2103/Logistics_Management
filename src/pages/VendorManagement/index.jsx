@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { vendors } from "../../utils/MockData";
 import Card from "../../components/Card";
 import SearchBar from "../../components/SearchBar";
+import addIcon from "../../assets/add-icon.png";
+import Form from "../../components/Form";
 import "./style.css";
 
 const VendorManagement = () => {
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   useEffect(() => {
     document.title = "Vendor Management";
@@ -43,12 +46,30 @@ const VendorManagement = () => {
     vendor.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const handleAddVendor = (vendor) => {
+    setData([...data, vendor]);
+  };
+
   return (
     <div className="vendor-management">
       <header className="vendor-management-header">
         <h1>Vendor Management</h1>
         <SearchBar value={searchQuery} onChange={handleSearch} />
       </header>
+      <div className="vendor-management-add">
+        <button
+          className="add-button"
+          onClick={() => setIsFormVisible(!isFormVisible)}
+        >
+          <img src={addIcon} alt="Add Vendor" className="add-icon" />
+        </button>
+      </div>
+      {isFormVisible && (
+        <Form
+          onAddVendor={handleAddVendor}
+          onClose={() => setIsFormVisible(false)}
+        />
+      )}
       <ul className="vendor-management-list">
         {filteredData.length > 0 ? (
           filteredData.map((vendor) => (
